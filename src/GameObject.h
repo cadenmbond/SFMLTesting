@@ -5,7 +5,7 @@
 
 class GameObject {
 public:
-    sf::RectangleShape shape; // Declare shape as a member variable
+    sf::RectangleShape shape;
 
     GameObject(sf::Vector2f size, sf::Vector2f position) {
         shape.setSize(size);
@@ -13,9 +13,8 @@ public:
     }
 
     void draw(sf::RenderWindow& window) {
-        window.draw(shape); // Now 'shape' is recognized
+        window.draw(shape);
     }
 };
 
-#endif // GAME_OBJECT_H
-
+#endif
