@@ -7,14 +7,12 @@
 std::vector<GameObject> game_objects;
 
 int main() {
-    // Create the window
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
-    // Movement speed
+    
     const float speed = 0.35f;
 
     game_objects = GameInit::init_objects();
 
-    // Main loop
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -22,15 +20,12 @@ int main() {
                 window.close();
             }
         }
-        // Clear the window
         window.clear();
 
-        // Loop through each GameObject and draw it
-        for (size_t i = 0; i < game_objects.size(); i++) { // Start from 0
-            game_objects[i].draw(window); // Call the draw method on each object
+        for (size_t i = 0; i < game_objects.size(); i++) { // loop through the vector containing all the game objects
+            game_objects[i].draw(window); // Call the draw method on each game object
         }
 
-        // Display the contents of the window
         window.display();
     }
 
