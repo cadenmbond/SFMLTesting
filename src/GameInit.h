@@ -9,5 +9,5 @@ public:
     static std::vector<GameObject> init_objects();
 };
 
-#endif // GAME_INIT_H
+#endif
 
